@@ -50,6 +50,10 @@ namespace ParamsListenerWebPortal.Helpers
                     {
                         responceMessage = await client.PostAsync(apiUri, content);
                     }
+                    else if (httpMethod == HttpMethod.PUT)
+                    {
+                        responceMessage = await client.PutAsync(apiUri,content);
+                    }
                     else if (httpMethod == HttpMethod.DELETE)
                     {
                         responceMessage = await client.DeleteAsync(apiUri);
