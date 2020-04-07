@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Configuration;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
@@ -34,34 +33,40 @@ namespace ParamsListenerWebPortal.Helpers
         /// <param name="httpMethod">Тип запроса</param>
         /// <param name="content">Данные для тела запроса (post)</param>
         /// <returns>Объект данных типа Т</returns>
-        public static async Task<T> ExecuteWebApiRequest<T>(string apiUri, HttpMethod httpMethod, StringContent content = null)
+        public static async Task<T> ExecuteWebApiRequest<T>(string host, string apiUri, HttpMethod httpMethod, StringContent content = null)
         {
             T responceObject = default(T);
-            string BaseUrl = ConfigurationManager.AppSettings["ServiceHost"];
 
-            using (HttpClient client = new HttpClient())
+            try
             {
-                HttpResponseMessage responceMessage;
-                client.BaseAddress = new Uri(BaseUrl);
-                client.DefaultRequestHeaders.Clear();
-                client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(BaseMediaType));
+                using (HttpClient client = new HttpClient())
+                {
+                    HttpResponseMessage responceMessage;
+                    client.BaseAddress = new Uri(host);
+                    client.DefaultRequestHeaders.Clear();
+                    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue(BaseMediaType));
 
-                if (httpMethod == HttpMethod.POST && content != null)
-                {
-                    responceMessage = await client.PostAsync(apiUri, content);
-                }
-                else if (httpMethod == HttpMethod.DELETE)
-                {
-                    responceMessage = await client.DeleteAsync(apiUri);
-                }
-                else
-                    responceMessage = await client.GetAsync(apiUri);
+                    if (httpMethod == HttpMethod.POST && content != null)
+                    {
+                        responceMessage = await client.PostAsync(apiUri, content);
+                    }
+                    else if (httpMethod == HttpMethod.DELETE)
+                    {
+                        responceMessage = await client.DeleteAsync(apiUri);
+                    }
+                    else
+                        responceMessage = await client.GetAsync(apiUri);
 
-                if (responceMessage.IsSuccessStatusCode)
-                {
-                    string responseResult = responceMessage.Content.ReadAsStringAsync().Result;
-                    responceObject = JsonConvert.DeserializeObject<T>(responseResult);
+                    if (responceMessage.IsSuccessStatusCode)
+                    {
+                        string responseResult = responceMessage.Content.ReadAsStringAsync().Result;
+                        responceObject = JsonConvert.DeserializeObject<T>(responseResult);
+                    }
                 }
+            }
+            catch (Exception ex)
+            {
+                //TODO: Добавить лог
             }
 
             return responceObject;

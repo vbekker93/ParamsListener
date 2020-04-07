@@ -6,8 +6,7 @@
 
 <h2>Parametrs</h2>
 
-
-<table class="table" border="1" >
+<table class="table" border="1">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.Param1)
@@ -72,69 +71,72 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param1)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param2)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param3)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param4)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param5)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param6)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param7)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param8)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param9)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param10)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param11)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param12)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param13)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param14)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param15)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param16)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param17)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param18)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param19)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Param20)
-        </td>
-    </tr>
-}
-
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param1)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param2)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param3)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param4)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param5)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param6)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param7)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param8)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param9)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param10)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param11)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param12)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param13)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param14)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param15)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param16)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param17)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param18)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param19)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Param20)
+                </td>
+            </tr>
+        }
+    }
 </table>
