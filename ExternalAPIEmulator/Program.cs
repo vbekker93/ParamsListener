@@ -24,8 +24,10 @@ namespace ExternalAPIEmulator
 
         private static void Main(string[] args)
         {
+            Console.WriteLine("Emulate started");
             InitParams();
-
+            Console.WriteLine("Initialization is done");
+            Console.WriteLine("Main update loop started");
             while (true)
             {
                 UpdateAndSendRandomEntity(SettingsApp.Default.MessageCountOnPeriod);

@@ -12,6 +12,8 @@ namespace ParamsListenerWebPortal.Controllers
         // GET: ParamsEntity
         public async Task<ActionResult> Index()
         {
+            Response.AddHeader("Refresh", "5");
+
             return View(await WebApiHelper.ExecuteWebApiRequest<List<ParamsEntity>>(ConfigurationManager.AppSettings["ServiceHost"],
                                                                                     "api/ParamsEntities",
                                                                                     WebApiHelper.HttpMethod.GET));
