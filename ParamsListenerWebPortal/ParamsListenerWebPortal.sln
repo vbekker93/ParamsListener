@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParamsListenerWebPortal", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BaseInfrastructure", "..\BaseInfrastructure\BaseInfrastructure.csproj", "{ACF2A981-92C6-4C9A-B82F-3FC76AB9F12D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestsWebPortal", "UnitTestsWebPortal\UnitTestsWebPortal.csproj", "{79CFC504-0576-4919-8798-2E094E314F9A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ACF2A981-92C6-4C9A-B82F-3FC76AB9F12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACF2A981-92C6-4C9A-B82F-3FC76AB9F12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACF2A981-92C6-4C9A-B82F-3FC76AB9F12D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79CFC504-0576-4919-8798-2E094E314F9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79CFC504-0576-4919-8798-2E094E314F9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79CFC504-0576-4919-8798-2E094E314F9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79CFC504-0576-4919-8798-2E094E314F9A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

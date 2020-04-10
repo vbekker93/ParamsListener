@@ -8,7 +8,7 @@
     <Setting Name="MessageCountOnPeriod" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">10</Value>
     </Setting>
-    <Setting Name="DefaultHostGet" Type="System.String" Scope="Application">
+    <Setting Name="DefaultServiceHost" Type="System.String" Scope="Application">
       <Value Profile="(Default)">https://localhost:44351</Value>
     </Setting>
     <Setting Name="MaxEntities" Type="System.Int32" Scope="Application">

@@ -1,11 +1,16 @@
 ﻿namespace Infrastructure.Models
 {
+    /// <summary>
+    /// Сущность данных
+    /// </summary>
     public class ParamsEntity
     {
         /// <summary>
-        /// Identify of Entity
+        /// ИД сущности
         /// </summary>
         public long Id { get; set; }
+
+        #region Список общих параметров
 
         public double Param1 { get; set; }
 
@@ -46,5 +51,7 @@
         public double Param19 { get; set; }
 
         public double Param20 { get; set; }
+
+        #endregion Список общих параметров
     }
 }

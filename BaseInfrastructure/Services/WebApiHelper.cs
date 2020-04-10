@@ -52,7 +52,7 @@ namespace ParamsListenerWebPortal.Helpers
                     }
                     else if (httpMethod == HttpMethod.PUT)
                     {
-                        responceMessage = await client.PutAsync(apiUri,content);
+                        responceMessage = await client.PutAsync(apiUri, content);
                     }
                     else if (httpMethod == HttpMethod.DELETE)
                     {
@@ -68,10 +68,7 @@ namespace ParamsListenerWebPortal.Helpers
                     }
                 }
             }
-            catch (Exception ex)
-            {
-                //TODO: Добавить лог
-            }
+            catch { }
 
             return responceObject;
         }

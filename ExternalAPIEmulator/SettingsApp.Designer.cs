@@ -44,9 +44,9 @@ namespace ExternalAPIEmulator {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("https://localhost:44351")]
-        public string DefaultHostGet {
+        public string DefaultServiceHost {
             get {
-                return ((string)(this["DefaultHostGet"]));
+                return ((string)(this["DefaultServiceHost"]));
             }
         }
         
