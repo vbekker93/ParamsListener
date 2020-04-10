@@ -75,9 +75,11 @@
 
     @if (Model != null)
     {
-        int i = 1;
+        int i = 0;
         foreach (var item in Model)
         {
+            i++;
+
             <tr>
                 <td>
                     Entity  @i
@@ -144,8 +146,10 @@
                 </td>
             </tr>
 
-            i++;
         }
+
+        if (i > 0)
+        {
         <tfoot style="background-color:rgb(76, 255, 0);">
             <tr id="sumFooter">
                 <td>Sum:</td>
@@ -251,6 +255,7 @@
                 </td>
             </tr>
         </tfoot>
+        }
     }
 </table>
 
